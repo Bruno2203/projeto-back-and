@@ -1,78 +1,87 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url("img/aurora.webp"); /* Adicionando imagem de fundo */
+    background-image: url("img/viagem.jpg"); /* Adicionando imagem de fundo */
     background-size: cover;
-    background-position: center;
-
-    
-}
-.client{
-    display: flex;
-    width: 17%;
-    margin-top: 100px;
-    margin-left: 43%;
-}
-.botao{
-    background: #ffffffb8;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: small;
-    width: 250px;
-    position: relative;
-    margin-left: 10%;
-    right: 10%;
-    top: 50px;
-
-}
-header{
-    height: 150px;
+    background-position: center;    margin: 0;
     padding: 0;
-    margin: 0%;
 }
 
 .container {
     width: 50%;
     margin: 50px auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Fazendo o fundo semi-transparente */
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    border-bottom: 3px solid #27461f;
+    position: relative;
+    left: 34%;
+    width: 500px;
+    bottom:0
+
 }
 
 h2 {
-    text-align: center;
-}
-
-.form-group {
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    font-weight: bold;
+.selection {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-input[type="text"],
-input[type="email"],
-input{
+.selection label {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-.um {
-    background-color: #007bff;
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
     color: #fff;
-    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
-.um:hover {
-    background-color: #003d7e;
+button:hover {
+    background-color: #45a049;
+}
+
+.form-section {
+    display: none;
+}
+
+#formCliente {
+    display: block;
 }
