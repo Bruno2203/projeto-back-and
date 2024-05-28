@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url("img/viagem.jpg"); /* Adicionando imagem de fundo */
-    background-size: cover;
-    background-position: center;    margin: 0;
+    background-color: #1abea3; /* Adicionando imagem de fundo */
+    background-size: 120%;
+    background-position: center;    
+    margin: 0;
     padding: 0;
 }
 
