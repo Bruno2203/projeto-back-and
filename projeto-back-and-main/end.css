@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:   #61cbcf; /* Adicionando imagem de fundo */
+    background-size: 120%;
+    background-position: center;    
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    height: 100px;
+    position: relative;
+    left: 625px;
+    
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    border: #000000 solid 2px;
+    position: relative;
+    border-radius: 10px;
+    padding: 50px;
+    height: 50px;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    
+    position: relative;
+    left: 34%;
+    width: 500px;
+    bottom:0
+
+}
+
+h2 {
+    color: #000000;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.selection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.selection label {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.form-section {
+    display: none;
+}
+
+#formCliente {
+    display: block;
+}
