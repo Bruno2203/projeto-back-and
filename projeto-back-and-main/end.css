@@ -19,13 +19,14 @@ body {
 
 header {
     display: flex;
-    flex-direction: column; /* Altere para coluna para empilhar o logo e o título */
     align-items: center; /* Centraliza os itens horizontalmente */
     border: #000000 solid 2px;
+    width: 100%;
     border-radius: 10px;
     padding: 20px; /* Reduzido para mais consistência */
     height: auto; /* Ajusta a altura para o conteúdo */
     text-align: center;
+    justify-content: center;
     margin-bottom: 20px; /* Espaço entre o header e o formulário */
 }
 
@@ -40,7 +41,7 @@ header {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px;
+    max-width: 130vh;
 }
 
 h1 {
