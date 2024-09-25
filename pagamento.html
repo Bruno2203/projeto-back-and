@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota dos Sonhos</title>
+    <link rel="stylesheet" href="pj.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <!-- Replace with actual logo -->
+        <img class="logo_a" src="img/logo.png"></div>
+        <h1>ROTA DOS SONHOS</h1>
+    </div>
+</header>
+
+    <main>
+      <section id="payment">
+        <h2>Forma de pagamento:</h2>
+        <div class="payment-options">
+            <div class="pix">
+                <h3>Pix:</h3>
+                <img class="qr" src="img/qr code.avif" alt="QR Code para pagamento Pix"><BR>
+                <h5>QR CODE para pagamento via pix.</h5>
+            </div>
+            <div class="card">
+                <h3>Cartão:</h3>
+                <form>
+                    <label for="card-number">Número do cartão</label>
+                    <input type="text" id="card-number" name="card-number">
+    
+                    <label for="card-name">Nome do titular</label>
+                    <input type="text" id="card-name" name="card-name">
+    
+                    <div class="card-details">
+                        <div>
+                            <label for="expiry-date">Dt. Vencimento:</label>
+                            <input type="text" id="expiry-date" name="expiry-date">
+                        </div>
+                        <div>
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <button type="submit"><a href="inicio.html">Voltar ao inicio</a></button>
+        <center>Ao finalizar a compra será enviado o comprovante ao seu Email.</center>
+    </section>
+      </main>
+    <footer>
+        <p>&copy; 2024 Rota dos Sonhos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

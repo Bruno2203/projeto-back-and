@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e0f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #00bcd4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.qr{
+    position: relative;
+    left: 100px;
+    width: 270px;
+    height: 270px;
+    top: -20px;
+}
+
+.logo_a{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    left: 400px;
+    top: -60px;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #00bcd4;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="time"],
+input[type="number"] {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008ba3;
+}
+
+/* Checkbox Groups */
+.checkbox-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Tour Packages */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.img_pacote{
+    position: relative;
+    width: 80rem;
+    height: 32rem;
+    left: 50px;
+    border-radius: 10px;
+}
+.package {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.package img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.price {
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+/* Payment Section */
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pix, .card {
+    flex: 1;
+}
+
+.card-details {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Scheduling Section */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem; /* Reduzir o padding em telas menores */
+    }
+
+    .logo_a {
+        width: 150px; /* Ajusta o tamanho da logo em telas menores */
+    }
+
+    .payment-options {
+        flex-direction: column;
+        margin-top: 1rem; /* Adiciona espaço entre as opções */
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+
+    /* Form Styles */
+    input[type="text"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="number"],
+    button {
+        width: 100%; /* Botão e campos ocupam a largura total */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem; /* Reduzir o padding do cabeçalho */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Tamanho da fonte menor */
+    }
+
+    button {
+        padding: 0.5rem; /* Reduzir padding do botão */
+    }
+
+    .qr {
+        width: 200px; /* Ajusta o tamanho do QR em telas muito pequenas */
+        height: 200px;
+    }
+
+    .logo_a {
+        width: 120px; /* Ajusta o tamanho da logo em telas muito pequenas */
+    }
+}
