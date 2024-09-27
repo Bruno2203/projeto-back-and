@@ -12,6 +12,16 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
+    position: relative;
+    display: flexbox;
+    text-align: center;
+    top: -5px;
+    height: 60%;
+}
+
+.tt{
+    position: relative;
+    top: -50px;
 }
 
 .qr{
@@ -22,27 +32,21 @@ header {
     top: -20px;
 }
 
-.logo_a{
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    left: 400px;
-    top: -60px;
-}
-
 main {
     padding: 2rem;
 }
 
 section {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 8px;
     padding: 2rem;
+    margin-left: 7%;
+    margin-right: 7%;
     margin-bottom: 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 70%;
-
+    
 }
+
 
 h2 {
     color: #00bcd4;
@@ -98,9 +102,9 @@ button:hover {
 
 .img_pacote{
     position: relative;
-    width: 80rem;
-    height: 32rem;
-    left: 50px;
+    width: 89%;
+    height: 28%;
+    left: 5%;
     border-radius: 10px;
 }
 .package {
@@ -140,11 +144,27 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
-        padding: 1rem; /* Reduzir o padding em telas menores */
+        padding: 10px; /* Reduzir o padding em telas menores */
+        width: 100%;
+    }
+    header{
+        height: 300px;
+    }
+    .logo_a{
+        text-align: center;
+        position: relative;
+        left: 32%;
+        width: 5%;
+        top: -50px;
+    }
+    .imgg{
+        position: relative;
+        right: 50%;
     }
 
-    .logo_a {
-        width: 150px; /* Ajusta o tamanho da logo em telas menores */
+    .tt{
+        position: relative;
+        font-size: small;
     }
 
     .payment-options {
