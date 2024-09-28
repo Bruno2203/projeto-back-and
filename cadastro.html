@@ -24,40 +24,43 @@
             <h2>Cadastro do Cliente:</h2>
             <form>
                 <label for="codigo">Código:</label>
-                <input type="text" id="codigo" name="codigo">
-
+                <input type="text" id="codigo" name="codigo"><br><br>
+    
                 <label for="nome">Nome/RS:</label>
-                <input type="text" id="nome" name="nome">
-
+                <input type="text" id="nome" name="nome"><br><br>
+    
                 <label for="fantasia">Fantasia:</label>
-                <input type="text" id="fantasia" name="fantasia">
-
+                <input type="text" id="fantasia" name="fantasia"><br><br>
+    
                 <label for="cpf-cnpj">CPF/CNPJ:</label>
-                <input type="text" id="cpf-cnpj" name="cpf-cnpj">
-
+                <input type="text" id="cpf-cnpj" name="cpf-cnpj"><br><br>
+    
                 <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco">
-
+                <input type="text" id="endereco" name="endereco"><br><br>
+    
                 <label for="contato">Contato:</label>
-                <input type="text" id="contato" name="contato">
-
+                <input type="text" id="contato" name="contato"><br><br>
+    
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone">
-                    
-                <button onclick="cadastro()"><a href="inicio.html">Cadastrar</a></button>                
+                <input type="tel" id="telefone" name="telefone"><br><br>
+    
+                <button type="button" onclick="cadastro()"><a href="inicio.html">Cadastrar</a></button>
             </form>
         </section>
-
-        <p><span id="codi"> </span></p><br>
-        <p><span id="nome"> </span></p><br>
-        <p><span id="apelido"> </span></p><br>
-        <p><span id="cpf/pj"> </span></p><br>
-        <p><span id="end"> </span></p><br>
-        <p><span id="contatoo"> </span></p><br>
-        <p><span id="fone"> </span></p>
+    
+        <h2>Dados Cadastrados:</h2>
+        <p><strong>Código:</strong> <span id="codi"></span></p>
+        <p><strong>Nome:</strong> <span id="nome-exibir"></span></p>
+        <p><strong>Fantasia:</strong> <span id="apelido-exibir"></span></p>
+        <p><strong>CPF/CNPJ:</strong> <span id="cpfpj-exibir"></span></p>
+        <p><strong>Endereço:</strong> <span id="end-exibir"></span></p>
+        <p><strong>Contato:</strong> <span id="contato-exibir"></span></p>
+        <p><strong>Telefone:</strong> <span id="fone-exibir"></span></p>
+    
       </main>
     <footer>
         <p>&copy; 2024 Rota dos Sonhos. Todos os direitos reservados.</p>
     </footer>
+    <script src="novo.js"></script>
 </body>
 </html>
