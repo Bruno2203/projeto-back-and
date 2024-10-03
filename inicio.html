@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rota dos Sonhos</title>
     <link rel="stylesheet" href="pj.css">
+    
 </head>
 <body>
     <header>
         <div class="logo_a">
-            <!-- Replace with actual logo -->
             <div class="imgg">
                 <img src="img/logo.png" width="250px">
             </div>
@@ -22,61 +22,70 @@
         <section id="iguacu-falls">
             <section id="tour-packages">
                 <h2 class="pag">Pacotes Turísticos</h2>
-                <div onclick="img_1()" class="package-grid">
-                    <a href="pacote.html" onclick="trocar_imagem()">
+                <div class="package-grid">
+                    <!-- Cada link chama a função com o nome do pacote e o src da imagem -->
+                    <a href="pacote.html" onclick="salvarImagem('Kattamaram', 'img/Kattamaram.jpg')">
                         <div class="package">
-                            <img id="img" src="img/Kattamaram.jpg" alt="Kattamaram">
+                            <img src="img/Kattamaram.jpg" alt="Kattamaram">
                             <h3>Kattamaram</h3>
                             <p>O PASSEIO MAIS CHARMOSO DA TRÍPLICE FRONTEIRA!</p>
                             <span class="price">R$360.00</span>
                         </div>
                     </a>
-                    <a href="pacote.html" onclick="trocar_imagem()">
+                    <a href="pacote.html" onclick="salvarImagem('Templo Budista', 'img/templo.jpg')">
                         <div class="package">
-                            <img id="img" src="img/templo.jpg" alt="Kattamaram">
+                            <img src="img/templo.jpg" alt="Templo Budista">
                             <h3>Templo Budista</h3>
                             <p>O PASSEIO MAIS CHARMOSO DA TRÍPLICE FRONTEIRA!</p>
                             <span class="price">R$360.00</span>
                         </div>
                     </a>
-                    <a href="pacote.html" onclick="trocar_imagem()">
+                    <a href="pacote.html" onclick="salvarImagem('Voo sobre as Cataratas', 'img/voo-cataratas.jpg')">
                         <div class="package">
-                            <img id="img" src="img/voo-cataratas.jpg" alt="Kattamaram">
+                            <img src="img/voo-cataratas.jpg" alt="Voo sobre as Cataratas">
                             <h3>Voo sobre as Cataratas</h3>
                             <p>O PASSEIO MAIS CHARMOSO DA TRÍPLICE FRONTEIRA!</p>
                             <span class="price">R$360.00</span>
                         </div>
                     </a>
-                    <a href="pacote.html" onclick="trocar_imagem()">
+                    <a href="pacote.html" onclick="salvarImagem('Parque das Aves', 'img/parque-das-aves.jpg')">
                         <div class="package">
-                            <img id="img" src="img/parque-das-aves.jpg" alt="Kattamaram">
+                            <img src="img/parque-das-aves.jpg" alt="Parque das Aves">
                             <h3>Parque das Aves</h3>
                             <p>O PASSEIO MAIS CHARMOSO DA TRÍPLICE FRONTEIRA!</p>
                             <span class="price">R$360.00</span>
                         </div>
                     </a>
-                    <a href="pacote.html" onclick="trocar_imagem()">
+                    <a href="pacote.html" onclick="salvarImagem('Marco das 3 Fronteiras', 'img/marco das tres fronteiras.jpg')">
                         <div class="package">
-                            <img id="img" src="img/marco das tres fronteiras.jpg" alt="Kattamaram">
+                            <img src="img/marco das tres fronteiras.jpg" alt="Marco das 3 Fronteiras">
                             <h3>Marco das 3 Fronteiras</h3>
                             <p>O PASSEIO MAIS CHARMOSO DA TRÍPLICE FRONTEIRA!</p>
-                            <span class="price">R$360.00</span>
+                            <span class="price">R$280.00</span>
                         </div>
                     </a>
-                    <a href="pacote.html" onclick="trocar_imagem()">
+                    <a href="pacote.html" onclick="salvarImagem('Itaipu', 'img/itaipu.jpg')">
                         <div class="package">
-                            <img id="img" src="img/itaipu.jpg" alt="Kattamaram">
-                            <h3>itaipu</h3>
+                            <img src="img/itaipu.jpg" alt="Itaipu">
+                            <h3>Itaipu</h3>
                             <p>O PASSEIO MAIS CHARMOSO DA TRÍPLICE FRONTEIRA!</p>
-                            <span class="price">R$360.00</span>
+                            <span class="price">R$320.00</span>
                         </div>
                     </a>
                 </div>
             </section>
         </section>
-      </main>
+    </main>
     <footer>
         <p>&copy; 2024 Rota dos Sonhos. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        // Função para salvar no localStorage o nome e a imagem do pacote
+        function salvarImagem(nomePacote, imagemSrc) {
+            localStorage.setItem('nomePacote', nomePacote);
+            localStorage.setItem('imagemPacote', imagemSrc);
+        }
+    </script>
 </body>
 </html>

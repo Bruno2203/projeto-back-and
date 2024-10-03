@@ -54,13 +54,3 @@ function carregarDados() {
 window.onload = carregarDados;
 
 
-function img_1() {
-  // Seleciona o elemento que vai exibir a imagem
-  let local_img = document.querySelector('.img_pacote');
-  
-  // Cria a string HTML da imagem
-  let img_cod1 = '<img src="img/Kattamaram.jpg" alt="Imagem Kattamaram">';
-  
-  // Insere a imagem no local selecionado
-  local_img.innerHTML = img_cod1;
-}

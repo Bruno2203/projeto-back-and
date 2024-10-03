@@ -21,9 +21,9 @@
 
     <main>
       <section id="iguacu-falls">
-        <h2 class="pag">CATARATAS DO IGUAÇU</h2>
+        <h2 class="pag" id="nomePacote">CATARATAS DO IGUAÇU</h2> <!-- O nome do pacote será alterado aqui -->
         <form>            
-          <img class="img_pacote"  src="img/cataratas.jpg" alt="imagem cataratas">
+          <img class="img_pacote" id="imagemPacote" src="" alt="Imagem do Pacote"><!-- A imagem será alterada aqui -->
             <h3>Pacote:</h3>
             <div class="checkbox-group">
                 <input type="checkbox" id="estrangeiro" name="pacote" value="estrangeiro">
@@ -58,5 +58,17 @@
     <footer>
         <p>&copy; 2024 Rota dos Sonhos. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        // Recuperar o nome e a imagem do pacote salvos no localStorage
+        const nomePacote = localStorage.getItem('nomePacote');
+        const imagemPacote = localStorage.getItem('imagemPacote');
+
+        // Atualizar o conteúdo da página com os valores recuperados
+        if (nomePacote && imagemPacote) {
+            document.getElementById('nomePacote').textContent = nomePacote;
+            document.getElementById('imagemPacote').src = imagemPacote;
+        }
+    </script>
 </body>
 </html>

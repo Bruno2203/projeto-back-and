@@ -1,3 +1,4 @@
+/* Ajuste básico de responsividade em todos os elementos */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -5,6 +6,8 @@ body {
     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(27,198,199,1) 35%, rgba(8,131,223,1) 100%);
     margin: 0;
     padding: 0;
+    width: 100%;
+    box-sizing: border-box; /* Garante que paddings/margens não ultrapassem a largura */
 }
 
 header {
@@ -13,59 +16,57 @@ header {
     text-align: center;
     padding: 1rem;
     position: relative;
-    display: flexbox;
-    text-align: center;
-    top: -5px;
-    height: 60%;
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Alinha ao centro horizontalmente */
+    height: 300px; /* Melhor controle de altura para telas menores */
 }
 
-.tt{
+.tt {
     position: relative;
-    top: 100px;
-    left: -10%;
+    top: 50px;
+    left: 0;
+    font-size: 1rem; /* Ajusta o tamanho da fonte conforme o layout */
 }
 
-.qr{
+.qr {
     position: relative;
-    left: 100px;
-    width: 270px;
-    height: 270px;
-    top: -20px;
+    left: 0;
+    width: 100%;
+    max-width: 270px; /* Limita o tamanho máximo para não esticar muito em telas grandes */
+    height: auto;
 }
 
-.logo_a{
+.logo_a {
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Responsividade da logo */
 }
+
 main {
     padding: 2rem;
+    max-width: 100%; /* Impede que o conteúdo ultrapasse a tela */
 }
 
 section {
     background-color: white;
     border-radius: 8px;
     padding: 2rem;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: -50px;
-    margin-bottom: 2rem;
+    margin: 2rem auto;
+    max-width: 90%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
 }
-
 
 h2 {
     color: #00bcd4;
-    font-size: 175%;
+    font-size: 1.75rem;
 }
 
 /* Form Styles */
 form {
     display: flex;
     flex-direction: column;
-}
-
-label {
-    margin-top: 1rem;
 }
 
 input[type="text"],
@@ -76,6 +77,7 @@ input[type="number"] {
     margin-top: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%; /* Garante que os inputs ocupem a largura total do container */
 }
 
 button {
@@ -86,6 +88,7 @@ button {
     border-radius: 4px;
     margin-top: 1rem;
     cursor: pointer;
+    width: 100%; /* Botão ocupa toda a largura */
 }
 
 button:hover {
@@ -104,32 +107,28 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    align-content: space-between;
-    margin: 100px;
-
+    margin: 10px;
+    width: 100%;
+    max-width: 90%; /* Garante que o grid não extrapole a tela */
 }
 
-.pag{
-    text-align: center;
-    position: relative;
-    top: 30px;
-}
-
-.img_pacote{
-    position: relative;
-    width: 89%;
-    height: 28%;
-    left: 5%;
-    border-radius: 10px;
-}
 .package {
     border: 1px solid #ccc;
     border-radius: 8px;
     border: black solid 2px;
     padding: 1rem;
     text-align: center;
-    width: 300px;
+    width: 100%; /* Ajuste para responsividade */
     height: 400px;
+    max-width: 300px; /* Limita a largura máxima */
+    margin: 10px;
+}
+.img_pacote{
+    width: 70%;
+    height: 57%;
+    position: relative;
+    border-radius: 20px;
+    left: 15%;
 }
 
 .package img {
@@ -157,72 +156,66 @@ button:hover {
     gap: 1rem;
 }
 
-/* Scheduling Section */
-
-/* Responsive Design */
+/* Ajustes de Responsividade */
+/* Telas menores */
 @media (max-width: 768px) {
-    main {
-        padding: 10px; /* Reduzir o padding em telas menores */
-        width: 100%;
+    header {
+        height: 150px; /* Altura menor para telas pequenas */
     }
-    header{
-        height: 300px;
-    }
-    .logo_a{
+
+    .logo_a {
         text-align: center;
         position: relative;
-        left: 32%;
-        width: 5%;
-        top: -50px;
-    }
-    .imgg{
-        position: relative;
-        right: 50%;
-    }
-
-    .tt{
-        position: relative;
-        font-size: small;
+        left: 0;
+        
+        width: auto;
     }
 
     .payment-options {
         flex-direction: column;
-        margin-top: 1rem; /* Adiciona espaço entre as opções */
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .imgg{
+        width: auto;
+        height: auto;
     }
 
     .package-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+        grid-template-columns: 1fr;
+        margin: 5px;
     }
 
-    /* Form Styles */
     input[type="text"],
     input[type="tel"],
     input[type="time"],
     input[type="number"],
     button {
-        width: 100%; /* Botão e campos ocupam a largura total */
+        width: 100%; /* Inputs e botões ocupam a largura total */
     }
 }
 
+/* Telas muito pequenas */
 @media (max-width: 480px) {
     header {
-        padding: 0.5rem; /* Reduzir o padding do cabeçalho */
+        padding: 0.5rem;
     }
 
     h2 {
-        font-size: 1.5rem; /* Tamanho da fonte menor */
+        font-size: 1.5rem;
     }
 
     button {
-        padding: 0.5rem; /* Reduzir padding do botão */
+        padding: 0.5rem;
     }
 
     .qr {
-        width: 200px; /* Ajusta o tamanho do QR em telas muito pequenas */
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     .logo_a {
-        width: 120px; /* Ajusta o tamanho da logo em telas muito pequenas */
+        width: 100px;
     }
 }
