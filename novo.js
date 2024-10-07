@@ -54,3 +54,10 @@ function carregarDados() {
 window.onload = carregarDados;
 
 
+document.getElementById('meuformulario').addEventListener('submit', function(Event))
+{
+  Event.preventDefault
+}
+function salvar_pct(){
+
+}
