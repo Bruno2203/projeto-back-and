@@ -59,7 +59,6 @@ CREATE TABLE destino (
   id_destino INT PRIMARY KEY,
   nome VARCHAR(100),
   descricao TEXT NOT NULL,
-  continente VARCHAR(50),
   pais VARCHAR(50)
 );
 
@@ -86,6 +85,7 @@ CREATE TABLE reserva_van (
 -- Tabela Funcao
 CREATE TABLE funcao (
   id_funcao INT PRIMARY KEY,
+  id_funcionario INT NOT NULL
   descricao VARCHAR(100)
 );
 
