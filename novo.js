@@ -1,6 +1,3 @@
-import sqlite3 from 'sqlite3';
-import { open } from 'sqlite';
-
 function cadastro() {
   // Obter os valores do formulário
   const nome_ = document.getElementById('nome').value;

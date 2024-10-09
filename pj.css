@@ -3,52 +3,66 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(27,198,199,1) 35%, rgba(8,131,223,1) 100%);
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(27, 198, 199, 1) 35%, rgba(8, 131, 223, 1) 100%);
     margin: 0;
     padding: 0;
     width: 100%;
     box-sizing: border-box; /* Garante que paddings/margens não ultrapassem a largura */
 }
 
+/* Estilo do cabeçalho */
 header {
-    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(27,198,199,1) 35%, rgba(8,131,223,1) 100%);
+    background-color: #4a90e2;
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
     display: flex;
-    align-items: center; /* Centraliza o conteúdo */
-    justify-content: center; /* Alinha ao centro horizontalmente */
-    height: 300px; /* Melhor controle de altura para telas menores */
+    justify-content: space-evenly;
 }
 
-.tt {
-    position: relative;
-    top: 50px;
-    left: 0;
-    font-size: 1rem; /* Ajusta o tamanho da fonte conforme o layout */
+.logo{
+    width: auto;
+    height: 100px;
+    
 }
 
-.qr {
-    position: relative;
-    left: 0;
-    width: 100%;
-    max-width: 270px; /* Limita o tamanho máximo para não esticar muito em telas grandes */
-    height: auto;
-}
+nav {
+    background-color: #333;
+    padding: 0.5em;
+    }
 
-.logo_a {
-    display: inline-flex;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    width: auto; /* Responsividade da logo */
-}
+    }
 
+nav ul li {
+    margin: 0 1em;
+    }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    }
+    
+    
+/* Seção principal */
 main {
     padding: 2rem;
-    max-width: 100%; /* Impede que o conteúdo ultrapasse a tela */
+    margin: 0 auto;
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Títulos */
+.title_al {
+    text-align: center;
+}
+
+/* Seções */
 section {
     background-color: white;
     border-radius: 8px;
@@ -58,28 +72,15 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #00bcd4;
-    font-size: 1.75rem;
-}
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="time"],
-input[type="number"] {
+/* Estilo dos inputs */
+input {
     padding: 0.5rem;
-    margin-top: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%; /* Garante que os inputs ocupem a largura total do container */
 }
 
+/* Estilo dos botões */
 button {
     background-color: #39a6e6;
     color: white;
@@ -95,40 +96,33 @@ button:hover {
     background-color: #2fccc4;
 }
 
-/* Checkbox Groups */
+/* Grupos de checkboxes */
 .checkbox-group {
-    display: flex;
+    display: block;
     gap: 1rem;
     margin-top: 0.5rem;
 }
 
-/* Tour Packages */
+.tamanho{
+    margin: 15px;
+}
+
+/* Grid de Pacotes */
 .package-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin: 10px;
     width: 100%;
-    max-width: 90%; /* Garante que o grid não extrapole a tela */
+    max-width: 90%;
 }
 
 .package {
     border: 1px solid #ccc;
     border-radius: 8px;
-    border: black solid 2px;
     padding: 1rem;
     text-align: center;
-    width: 100%; /* Ajuste para responsividade */
     height: 400px;
-    max-width: 300px; /* Limita a largura máxima */
-    margin: 10px;
-}
-.img_pacote{
-    width: 70%;
-    height: 57%;
-    position: relative;
-    border-radius: 20px;
-    left: 15%;
 }
 
 .package img {
@@ -141,7 +135,7 @@ button:hover {
     color: #00bcd4;
 }
 
-/* Payment Section */
+/* Seção de Pagamento */
 .payment-options {
     display: flex;
     justify-content: space-between;
@@ -157,18 +151,9 @@ button:hover {
 }
 
 /* Ajustes de Responsividade */
-/* Telas menores */
 @media (max-width: 768px) {
     header {
-        height: 150px; /* Altura menor para telas pequenas */
-    }
-
-    .logo_a {
-        text-align: center;
-        position: relative;
-        left: 0;
-        
-        width: auto;
+        height: auto; /* Altura automática para telas pequenas */
     }
 
     .payment-options {
@@ -177,22 +162,8 @@ button:hover {
         margin-top: 1rem;
     }
 
-    .imgg{
-        width: auto;
-        height: auto;
-    }
-
     .package-grid {
-        grid-template-columns: 1fr;
-        margin: 5px;
-    }
-
-    input[type="text"],
-    input[type="tel"],
-    input[type="time"],
-    input[type="number"],
-    button {
-        width: 100%; /* Inputs e botões ocupam a largura total */
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
     }
 }
 
@@ -216,6 +187,6 @@ button:hover {
     }
 
     .logo_a {
-        width: 100px;
+        width: 100px; /* Ajusta o tamanho da logo */
     }
 }
