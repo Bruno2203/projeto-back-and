@@ -15,14 +15,17 @@ header {
     background-color: #4a90e2;
     color: white;
     text-align: center;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
+    display: flex;                  /* Habilita o layout flexbox */
+    justify-content: center;        /* Centraliza os itens horizontalmente */
+    align-items: center;            /* Centraliza os itens verticalmente */
+    flex-wrap: wrap;                /* Permite que os itens se movam para a próxima linha, se necessário */
+
 }
 
 .logo{
     width: auto;
-    height: 100px;
+    height: 200px;
+    margin: 0;
     
 }
 

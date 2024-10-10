@@ -1,4 +1,4 @@
-function cadastro() {
+async function cadastro() {
   // Obter os valores do formulário
   const nome_ = document.getElementById('nome').value;
   const cpf_ = document.getElementById('cpf').value;  
@@ -10,22 +10,44 @@ function cadastro() {
   const email_ = document.getElementById('email').value;
   const telefone_ = document.getElementById('telefone').value;
   const rg_ = document.getElementById('rg').value;
+
+  await fetch ('/cadastro.html',{
+    method: 'POST',
+    headers: {'content-Type': 'application/JSON'},
+    body: JSON.stringify({nome_, cpf_, endereco_, nacionalidade_, n_cartao_, cvv_, dt_nascimento_, email_, telefone_, rg_})
+  })
+  alert("sucesso!")
 }
 
-function destino() {
+async function destino() {
   // Obter os valores do formulário
   const nome_pct_ = document.getElementById('nome_pct').value;
   const descricao_ = document.getElementById('descricao').value;  
   const pais_ = document.getElementById('pais').value;
+
+  await fetch ('/cad_destino.html',{
+    method: 'POST',
+    headers: {'content-Type': 'application/JSON'},
+    body: JSON.stringify({nome_pct_, descricao_, pais_})
+  })
+  alert("sucesso!")
 }
 
-function função() {
+
+async function função() {
   // Obter os valores do formulário
   const id_funcionario_ = document.getElementById('id_funcionario').value;
   const descricao = document.getElementById('descricao').value;  
+  
+  await fetch ('/cad_função.html',{
+    method: 'POST',
+    headers: {'content-Type': 'application/JSON'},
+    body: JSON.stringify({id_funcionario_, descricao})
+  })
+  alert("sucesso!")
 }
 
-function funcionario() {
+async function funcionario() {
   // Obter os valores do formulário
   const nome_ = document.getElementById('nome_f').value;
   const cpf = document.getElementById('cpf_f').value;  
@@ -36,9 +58,16 @@ function funcionario() {
   const email_ = document.getElementById('email_f').value;
   const telefone_ = document.getElementById('telefone_f').value;
   const status = document.getElementById('status_f').value;
+
+  await fetch ('/cad_funcionario.html',{
+    method: 'POST',
+    headers: {'content-Type': 'application/JSON'},
+    body: JSON.stringify({nome_, cpf, cargo, genero, salario,dt_ad, email_, telefone_, status})
+  })
+  alert("sucesso!")
 }
 
-function pacote() {
+async function pacote() {
   // Obter os valores do formulário
   const nome_pct = document.getElementById('nome').value;
   const id_cliente = document.getElementById('id_cliente').value;  
@@ -47,15 +76,29 @@ function pacote() {
   const duracao_pct = document.getElementById('duracao_pct').value;
   const descricao_pct = document.getElementById('descricao_pct').value;
   const dt_reserva = document.getElementById('dt_reserva').value;
-  const status_pdt = document.getElementById('status_pdt').value;
+  const status_pct = document.getElementById('status_pdt').value;
   const horario_pct = document.getElementById('horario_pct').value;
+
+  await fetch ('/cad_pacote.html',{
+    method: 'POST',
+    headers: {'content-Type': 'application/JSON'},
+    body: JSON.stringify({nome_pct, id_cliente, id_destino, preço_pct, duracao_pct, descricao_pct, dt_reserva, status_pct, horario_pct })
+  })
+  alert("sucesso!")
 }
 
-function veiculo() {
+async function veiculo() {
   // Obter os valores do formulário
   const marca_v = document.getElementById('marca_v').value;
   const modelo_v = document.getElementById('modelo_v').value;  
   const placa_v = document.getElementById('placa_v').value;
   const lotação = document.getElementById('lotação').value;
   const ultima_manutenção = document.getElementById('ultima_manutenção').value;
+
+  await fetch ('/cad_veiculo.html',{
+    method: 'POST',
+    headers: {'content-Type': 'application/JSON'},
+    body: JSON.stringify({marca_v, modelo_v, placa_v, lotação, ultima_manutenção})
+  })
+  alert("sucesso!")
 }
