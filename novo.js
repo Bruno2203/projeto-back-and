@@ -33,20 +33,6 @@ async function destino() {
   alert("sucesso!")
 }
 
-
-async function função() {
-  // Obter os valores do formulário
-  const id_funcionario_ = document.getElementById('id_funcionario').value;
-  const descricao = document.getElementById('descricao').value;  
-  
-  await fetch ('/cad_função.html',{
-    method: 'POST',
-    headers: {'content-Type': 'application/JSON'},
-    body: JSON.stringify({id_funcionario_, descricao})
-  })
-  alert("sucesso!")
-}
-
 async function funcionario() {
   // Obter os valores do formulário
   const nome_ = document.getElementById('nome_f').value;
@@ -63,26 +49,6 @@ async function funcionario() {
     method: 'POST',
     headers: {'content-Type': 'application/JSON'},
     body: JSON.stringify({nome_, cpf, cargo, genero, salario,dt_ad, email_, telefone_, status})
-  })
-  alert("sucesso!")
-}
-
-async function pacote() {
-  // Obter os valores do formulário
-  const nome_pct = document.getElementById('nome').value;
-  const id_cliente = document.getElementById('id_cliente').value;  
-  const id_destino = document.getElementById('id_destino').value;
-  const preço_pct = document.getElementById('preço_pct').value;
-  const duracao_pct = document.getElementById('duracao_pct').value;
-  const descricao_pct = document.getElementById('descricao_pct').value;
-  const dt_reserva = document.getElementById('dt_reserva').value;
-  const status_pct = document.getElementById('status_pdt').value;
-  const horario_pct = document.getElementById('horario_pct').value;
-
-  await fetch ('/cad_pacote.html',{
-    method: 'POST',
-    headers: {'content-Type': 'application/JSON'},
-    body: JSON.stringify({nome_pct, id_cliente, id_destino, preço_pct, duracao_pct, descricao_pct, dt_reserva, status_pct, horario_pct })
   })
   alert("sucesso!")
 }
