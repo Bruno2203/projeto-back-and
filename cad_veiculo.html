@@ -26,7 +26,34 @@
             <button onclick="veiculo()" id="pct">cadastrar</button>
         </div>
 
-        <p><strong>Código:</strong> <span id="codi"></span></p>
+    </main>
+    <br>
+    <br>    
+    <main>
+        <div class="tamanho">
+            <input type="text" id="consultar" placeholder="pesquise a marca...">
+            <input type="text" id="consultar" placeholder="pesquise o modelo...">
+            <input type="text" id="consultar" placeholder="pesquise o placa...">
+            <input type="text" id="consultar" placeholder="pesquise o lotação...">
+            <input type="text" id="consultar" placeholder="pesquise o ultima manutenção...">
+
+            <button onclick="searchPackages()">Pesquisar</button>
+
+            <table id="resultTable">
+                <thead>
+                    <tr><h5>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Placa</th>
+                        <th>Lotação</th>
+                        <th>Ultima manutenção</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os resultados da pesquisa aparecerão aqui -->
+                </tbody>
+            </table>
+        </div>  
     </main>
 </body>
 </html>

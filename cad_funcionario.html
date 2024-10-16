@@ -30,5 +30,40 @@
             <button onclick="funcionario()" id="pct">cadastrar</button>
         </div>
     </main>
+    <br>
+    <br>    
+    <main>
+        <div class="tamanho">
+            <input type="text" id="consultar" placeholder="pesquise o nome...">
+            <input type="text" id="consultar" placeholder="pesquise o genero...">
+            <input type="text" id="consultar" placeholder="pesquise o cpf...">
+            <input type="text" id="consultar" placeholder="pesquise o cargo...">
+            <input type="text" id="consultar" placeholder="pesquise o data de admissão...">
+            <input type="text" id="consultar" placeholder="pesquise o telefone...">
+            <input type="text" id="consultar" placeholder="pesquise o email...">
+            <input type="text" id="consultar" placeholder="pesquise o endereco...">
+            <input type="text" id="consultar" placeholder="pesquise o Status...">
+            <button onclick="searchPackages()">Pesquisar</button>
+
+            <table id="resultTable">
+                <thead>
+                    <tr><h5>
+                        <th>Nome</th>
+                        <th>Genero</th>
+                        <th>Endereço</th>
+                        <th>Cargo</th>
+                        <th>data de admissão</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Salario</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os resultados da pesquisa aparecerão aqui -->
+                </tbody>
+            </table>
+        </div>  
+    </main>
 </body>
 </html>

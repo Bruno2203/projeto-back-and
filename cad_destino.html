@@ -23,5 +23,27 @@
             <button onclick="destino()" id="pct">cadastrar</button>
         </div>
     </main>
+    <br>
+    <br>    
+    <main>
+        <div class="tamanho">
+            <input type="text" id="consultar" placeholder="pesquise o nome do pacote...">
+            <input type="text" id="consultar" placeholder="pesquise a descricao...">
+            <input type="text" id="consultar" placeholder="pesquise o pais...">
+            <button onclick="searchPackages()">Pesquisar</button>
+            <table id="resultTable">
+                <thead>
+                    <tr><h5>
+                        <th>Nome do pacote</th>
+                        <th>Descrição</th>
+                        <th>País</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os resultados da pesquisa aparecerão aqui -->
+                </tbody>
+            </table>
+        </div>  
+    </main>
 </body>
 </html>
