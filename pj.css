@@ -65,6 +65,25 @@ main {
     text-align: center;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    height: 30px;
+    background: white;
+}
+th {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: small;
+    width: auto;
+}
+
 /* Seções */
 section {
     background-color: white;
